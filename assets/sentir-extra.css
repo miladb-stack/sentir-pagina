@@ -1,12 +1,62 @@
-/* Secciones agregadas a la copia: botones de WhatsApp, "Cómo funciona" y preguntas frecuentes.
-   Colores y tipografías toman los del sitio: teal #00cdc9, Poppins (títulos), Raleway (texto). */
+/* Secciones agregadas a la copia (WhatsApp, "Cómo funciona", FAQ) y ajustes de diseño.
+   Sistema de la marca: teal #00cdc9 para fondos y acentos, Poppins (títulos), Raleway (texto).
+   El teal #00cdc9 solo llega a 1.9:1 sobre blanco, así que como color de TEXTO se usa --sentir-teal-texto. */
+
+:root {
+  --sentir-teal: #00cdc9;
+  --sentir-teal-texto: #007a77;   /* 5.2:1 sobre blanco, 4.8:1 sobre #f6f6f6 */
+  --sentir-tinta: #5a5a5a;        /* texto de lectura del sitio, 6.9:1 sobre blanco */
+  --sentir-verde: #3f6634;        /* verde del h1, color "secondary" de la marca */
+}
 
 .sentir-wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
-.sentir-section { padding: 64px 0; font-family: Raleway, sans-serif; color: #5a5a5a; }
+.sentir-section { padding: 64px 0; font-family: Raleway, sans-serif; color: var(--sentir-tinta); }
 .sentir-section--grey { background: #f6f6f6; }
 .sentir-section h2 {
   font-family: Poppins, sans-serif; font-weight: 600; font-size: 30px; line-height: 1.25;
-  color: #00cdc9; text-align: center; margin: 0 0 12px;
+  color: var(--sentir-teal-texto); text-align: center; margin: 0 0 12px; text-wrap: balance;
+}
+
+/* ---------- Ajustes de diseño sobre las páginas de Elementor ---------- */
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible, button:focus-visible, summary:focus-visible, .elementor-button:focus-visible {
+  outline: 3px solid var(--sentir-teal-texto); outline-offset: 3px;
+}
+
+/* H1 de la home: Poppins en vez de la tipografía de reemplazo (Times New Roman) */
+.elementor-element-6d21ba07 .elementor-heading-title {
+  font-family: Poppins, sans-serif !important; font-weight: 600 !important;
+  font-size: clamp(30px, 4.2vw, 50px) !important; line-height: 1.15 !important;
+  letter-spacing: .01em; color: var(--sentir-verde) !important; text-wrap: balance;
+  text-shadow: 0 0 10px rgba(255, 255, 255, .85), 0 0 3px rgba(255, 255, 255, .9) !important;
+}
+/* En pantallas anchas la foto tiene a la persona al centro: el título va a la izquierda en dos líneas */
+@media (min-width: 1025px) {
+  .elementor-element-6d21ba07 .elementor-heading-title { text-align: left; max-width: 9em; margin-right: auto; }
+  .elementor-element-6d21ba07 { padding-left: 6%; }
+}
+
+/* Tarjetas de servicio: títulos de la misma altura para que los botones queden alineados */
+@media (min-width: 768px) {
+  .elementor-element-200b81ba .elementor-widget-heading .elementor-heading-title { min-height: 3.4em; }
+}
+
+/* Pie de página: texto oscuro sobre el teal claro (de 3.1:1 a más de 7:1) */
+.elementor-element-6b3404f, .elementor-element-6b3404f a, .elementor-element-6b3404f p,
+.elementor-element-6b3404f .elementor-icon-list-text { color: #1d3a39 !important; }
+
+/* Fechas y metadatos del blog: gris más oscuro (de 2.2:1 a 5.3:1) */
+.elementor-post__meta-data, .elementor-post__meta-data span,
+.entry-meta, .entry-meta * { color: #6b6b6b !important; }
+
+/* Botón "Enviar" del formulario de contacto: verde más oscuro para que el texto blanco se lea (de 2.4:1 a 5:1) */
+.wpforms-container .wpforms-submit-container .wpforms-submit,
+.wpforms-container button[type="submit"] { background-color: #2a7d34 !important; border-color: #2a7d34 !important; color: #fff !important; }
+
+/* Quien pide menos movimiento no ve el zoom del carrusel ni las transiciones */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 .sentir-lead { text-align: center; max-width: 720px; margin: 0 auto 40px; font-size: 17px; line-height: 1.6; }
 
@@ -52,7 +102,7 @@
 
 /* Banda de contacto al final de cada servicio */
 .sentir-band { background: #e9fafa; padding: 40px 0; text-align: center; font-family: Raleway, sans-serif; color: #5a5a5a; }
-.sentir-band h2 { font-size: 24px; margin-bottom: 8px; }
+.sentir-band h2 { font-size: 24px; margin-bottom: 8px; color: var(--sentir-teal-texto); }
 .sentir-band p { margin: 0 0 20px; font-size: 17px; }
 
 @media (max-width: 900px) { .sentir-steps { grid-template-columns: repeat(2, 1fr); } }
