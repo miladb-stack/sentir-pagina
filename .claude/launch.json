@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "sentir-clone",
-      "runtimeExecutable": "npx.cmd",
-      "runtimeArgs": ["--yes", "serve", "-l", "4173", "."],
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".claude/serve.mjs", "4173"],
       "port": 4173
     }
   ]
