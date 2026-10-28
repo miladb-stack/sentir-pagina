@@ -37,6 +37,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .elementor-button:
   .elementor-element-6d21ba07 { padding-left: 6%; }
 }
 
+/* En móvil el título ocupaba el ancho completo y rozaba los bordes: más chico y con margen */
+@media (max-width: 600px) {
+  .elementor-element-6d21ba07 .elementor-heading-title {
+    font-size: clamp(22px, 6.4vw, 28px) !important; padding-inline: 16px; box-sizing: border-box; text-align: center;
+  }
+}
+
 /* Tarjetas de servicio: títulos de la misma altura para que los botones queden alineados */
 @media (min-width: 768px) {
   .elementor-element-200b81ba .elementor-widget-heading .elementor-heading-title { min-height: 3.4em; }
