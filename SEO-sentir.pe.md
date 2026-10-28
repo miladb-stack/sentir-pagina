@@ -47,7 +47,14 @@ caracteres. Para `/talleres/` la copia conserva la que ya tenía; el texto de la
 
 Borrador en `llms.txt`. No es un factor de ranking; si se quiere, activarlo desde Yoast o subirlo a la raíz de sentir.pe.
 
-## 5. Pendientes de contenido (no los resolví)
+## 5. Rediseño en `/moderno/`
+
+Propuesta de página moderna con el contenido real del sitio (HTML + CSS + 20 líneas de JS, sin librerías ni WordPress).
+Marca conservada (teal, verde, logo), claro y oscuro automáticos, accesible (contraste AA medido en ambos temas).
+Quedó fuera a propósito la foto de los talleres de verano (`unnamed-1.jpg`): es una imagen generada con IA, con marca de
+agua de Gemini y textos sin sentido ("PIENXA & GRANGE"). Conviene reemplazarla también en el sitio actual.
+
+## 6. Pendientes de contenido (no los resolví)
 
 - Hay **dos números de WhatsApp**: +51 957 100 237 (botón "Agenda tu cita") y +51 936 017 724 (pie y FAQ de las páginas de servicio). Decidir cuál es el oficial.
 - "Talleres de verano para adolescentes" muestra "Inicio: 14 de enero" sin año.
