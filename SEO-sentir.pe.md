@@ -28,12 +28,14 @@ caracteres. Para `/talleres/` la copia conserva la que ya tenía; el texto de la
 | `/la-pandemia-provoca-un-aumento-de-la-ansiedad-y-la-depresion/` | 129 | Cómo los temores de la pandemia están aumentando los síntomas de ansiedad y depresión y por qué muchas personas no los reconocen. |
 | `/la-covid-19-provoca-depresion-grave-mas-en-la-mitad-52-4-de-los-pacientes-que-superan-la-enfermedad/` | 145 | Estudio publicado en JAMA sobre la depresión grave tras superar la COVID-19: quiénes la presentan con más frecuencia y qué síntomas la acompañan. |
 
-## 2. Home
+## 2. Home clásica (ahora en `/clasica/`)
+
+Es la home de WordPress/Elementor con las mejoras aplicadas. La página principal de esta copia es ahora el rediseño (sección 5).
 
 - **Título:** `Psicólogo en Surco, Monterrico | Terapia presencial y virtual | Sentir` (hoy es un eslogan).
 - **H1:** `Atención psicológica en Surco` (hoy "Atención Psicológica").
 - **Typo:** "Psicopterapia" → "Psicoterapia" en un título de servicio.
-- Secciones nuevas: "Cómo empezar en Sentir" (4 pasos) y "Preguntas frecuentes" (6). Están en `index.html`, con el CSS en `assets/sentir-extra.css`.
+- Secciones nuevas: "Cómo empezar en Sentir" (4 pasos) y "Preguntas frecuentes" (6). Están en `clasica/index.html`, con el CSS en `assets/sentir-extra.css`.
 - Datos estructurados `LocalBusiness` y `FAQPage` (bloque `<script type="application/ld+json" id="sentir-ld">`).
   Google limita hoy los resultados enriquecidos de FAQ a sitios de gobierno y salud muy conocidos, así que no esperar que aparezcan; el `LocalBusiness` sí es útil.
 
@@ -47,9 +49,10 @@ caracteres. Para `/talleres/` la copia conserva la que ya tenía; el texto de la
 
 Borrador en `llms.txt`. No es un factor de ranking; si se quiere, activarlo desde Yoast o subirlo a la raíz de sentir.pe.
 
-## 5. Rediseño en `/moderno/`
+## 5. Rediseño (página principal de esta copia)
 
-Propuesta de página moderna con el contenido real del sitio (HTML + CSS + 20 líneas de JS, sin librerías ni WordPress).
+Es `index.html` en la raíz, con `assets/moderno.css` y `assets/moderno.js`. La home anterior quedó en `/clasica/` y
+`/moderno/` redirige a la raíz. Página moderna con el contenido real del sitio (HTML + CSS + 20 líneas de JS, sin librerías ni WordPress).
 Marca conservada (teal, verde, logo), claro y oscuro automáticos, accesible (contraste AA medido en ambos temas).
 Quedó fuera a propósito la foto de los talleres de verano (`unnamed-1.jpg`): es una imagen generada con IA, con marca de
 agua de Gemini y textos sin sentido ("PIENXA & GRANGE"). Conviene reemplazarla también en el sitio actual.
