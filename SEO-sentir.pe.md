@@ -45,6 +45,29 @@ Es la home de WordPress/Elementor con las mejoras aplicadas. La página principa
 - H1 de la home en Poppins (hoy Times New Roman de reemplazo en Elementor).
 - Foco visible con teclado, `prefers-reduced-motion`, botón "volver arriba" con nombre accesible, alt en las fotos del equipo.
 
+### 3.1 Ortografía y textos sin traducir (hay que corregirlos en WordPress)
+
+Revisión con diccionario de español sobre las 23 páginas (el texto lo heredó el sitio original; la copia ya está corregida).
+
+| Dónde | Dice | Debe decir |
+|---|---|---|
+| Barra gris superior y pie, todas las páginas | Los Alamos de Monterrico | Los **Á**lamos de Monterrico |
+| Pie de las entradas del blog | Siguenos | **Sí**guenos |
+| Blog y categoría "Articulos" | Articulos | **Artí**culos |
+| Blog (listado de entradas) | Leer mas » | Leer **m**ás » |
+| `/privacy-policy/` | Politicas de Privacidad · reservacion · título "Privacy Policy" | **Polí**ticas de Privacidad · reserva**ción** · "Política de privacidad" |
+| `/talleres/` (título SEO) | Talleres Psicologicos \| Sentir Consultorio Psicologico | Talleres **Psicológicos** \| Sentir Consultorio **Psicológico** |
+| `/nosotros/` (bio de Karime Mahamud) | Psicoanalitica · Psicoanalisis | Psicoanal**í**tica · Psicoan**á**lisis |
+| `/talleresdeveranoparaadolescentes/` | Reconocimento | Reconoci**mi**ento |
+
+Textos que siguen en inglés porque el tema (Astra) y los plugins no están traducidos: "Skip to content", "Menu",
+"Post navigation", "Previous / Next Entrada", "Leave a Comment", "Cancel Reply", "Type here..", "Name* / Email* / Website",
+"Search", "Read More »", "Website by Index.pe". Probablemente se resuelven poniendo el sitio en Español (Ajustes → Generales → Idioma)
+y actualizando traducciones, o con un plugin como Loco Translate.
+
+Además, al compartir en redes, las páginas sin meta description muestran un texto automático con saltos de línea pegados
+("viernesHorario") y URLs de videos. Se arregla con la sección 1.
+
 ## 4. `llms.txt`
 
 Borrador en `llms.txt`. No es un factor de ranking; si se quiere, activarlo desde Yoast o subirlo a la raíz de sentir.pe.
