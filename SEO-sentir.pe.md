@@ -80,7 +80,25 @@ Marca conservada (teal, verde, logo), claro y oscuro automáticos, accesible (co
 Quedó fuera a propósito la foto de los talleres de verano (`unnamed-1.jpg`): es una imagen generada con IA, con marca de
 agua de Gemini y textos sin sentido ("PIENXA & GRANGE"). Conviene reemplazarla también en el sitio actual.
 
+### 5.1 Páginas interiores rediseñadas (20)
+
+Servicios (niños, adolescentes, adultos, pareja y familia, evaluación, psicoterapia individual, terapias, talleres, talleres de verano),
+Nosotros, Contacto, Política de privacidad, Blog, 3 categorías y los 4 artículos. Mismo encabezado, pie, colores y tipografía que la principal.
+Se generaron desde el texto real del sitio (una comprobación frase por frase no encontró contenido perdido). La versión anterior de estas páginas está
+en el historial de git (commit `4207697`).
+
+Cambios de contenido que conviene revisar:
+
+- **Formularios y comentarios:** se quitaron el formulario de contacto y los comentarios de los artículos, porque necesitan WordPress; en su lugar hay botones de WhatsApp.
+- **Teléfono:** en las respuestas "¿Cómo agendo una cita?" se quitó el número +51 936 017 724 (el botón de WhatsApp usa el +51 957 100 237) para no mostrar dos números distintos.
+- **Talleres:** el original decía "promovemos dos tipos de talleres" pero lista tres; quedó como "distintos tipos".
+- **Imágenes:** no se usan `unnamed.jpg` ni `unnamed-1.jpg` (generadas con IA, con marca de agua de Gemini y carteles sin sentido) ni `servicios*.jpg` (collages de fotos de stock). Se usan solo fotos reales del consultorio.
+- **Gráfico de Statista** (artículo de la pandemia): está en inglés y con datos de EE. UU.; se agregó su fuente y una descripción en español.
+- **Videos:** los 5 videos verticales de las psicólogas se mantienen, con reproductor y sin autoplay.
+
 ## 6. Pendientes de contenido (no los resolví)
+
+- "Pía Zapata" (talleres de verano) y "Pia Zapata" (Nosotros): falta decidir cuál es la grafía correcta.
 
 - Hay **dos números de WhatsApp**: +51 957 100 237 (botón "Agenda tu cita") y +51 936 017 724 (pie y FAQ de las páginas de servicio). Decidir cuál es el oficial.
 - "Talleres de verano para adolescentes" muestra "Inicio: 14 de enero" sin año.
