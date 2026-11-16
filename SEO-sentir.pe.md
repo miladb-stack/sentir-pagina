@@ -1,7 +1,8 @@
 # Qué llevar al sitio real (sentir.pe)
 
-Esta copia en GitHub Pages está en `noindex` y su `canonical` apunta a sentir.pe: **nada de lo que hay aquí
-cambia el SEO de sentir.pe hasta que se aplique en el WordPress original.** Lista de lo que vale la pena llevar.
+Esta copia en GitHub Pages está configurada para servirse en el dominio **sentir.pe** (archivo `CNAME`): ya no tiene `noindex`
+(solo `/clasica/` y `/moderno/` lo conservan), su `canonical` apunta a sentir.pe y hay `robots.txt` y `sitemap.xml`.
+Mientras el DNS siga apuntando al WordPress original, nada de esto cambia el SEO de sentir.pe. Lista de lo que vale la pena llevar.
 
 ## 1. Meta descriptions (faltan en casi todas las páginas interiores)
 
