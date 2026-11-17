@@ -26,3 +26,12 @@
     (window.dataLayer = window.dataLayer || []).push({ event: "JoinChat" });
   }, true);
 })();
+
+// Meta Pixel: evento personalizado "JoinChat" al hacer clic en WhatsApp (mismo nombre que enviaba el widget del
+// sitio anterior, para conservar la serie histórica en el Administrador de eventos de Meta).
+(() => {
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest('a[href*="api.whatsapp.com"], a[href*="wa.me"]');
+    if (a && typeof window.fbq === "function") window.fbq("trackCustom", "JoinChat");
+  }, true);
+})();
