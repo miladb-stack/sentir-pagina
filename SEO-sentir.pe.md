@@ -1,7 +1,8 @@
 # Qué llevar al sitio real (sentir.pe)
 
-Esta copia en GitHub Pages está en `noindex` y su `canonical` apunta a sentir.pe: **nada de lo que hay aquí
-cambia el SEO de sentir.pe hasta que se aplique en el WordPress original.** Lista de lo que vale la pena llevar.
+Esta copia en GitHub Pages está configurada para servirse en el dominio **sentir.pe** (archivo `CNAME`): ya no tiene `noindex`
+(solo `/clasica/` y `/moderno/` lo conservan), su `canonical` apunta a sentir.pe y hay `robots.txt` y `sitemap.xml`.
+Mientras el DNS siga apuntando al WordPress original, nada de esto cambia el SEO de sentir.pe. Lista de lo que vale la pena llevar.
 
 ## 1. Meta descriptions (faltan en casi todas las páginas interiores)
 
@@ -103,4 +104,6 @@ Cambios de contenido que conviene revisar:
 - Hay **dos números de WhatsApp**: +51 957 100 237 (botón "Agenda tu cita") y +51 936 017 724 (pie y FAQ de las páginas de servicio). Decidir cuál es el oficial.
 - "Talleres de verano para adolescentes" muestra "Inicio: 14 de enero" sin año.
 - El pie dice "Copyright © 2021" y los 4 artículos del blog son de 2021.
-- Los IDs de Tag Manager, Analytics, Google Ads y Facebook Pixel siguen en la copia: las visitas a github.io se suman a las métricas reales.
+- **Medición (Google Ads / GA4):** las 21 páginas nuevas cargan solo el contenedor de Tag Manager `GTM-T3HGC3J` (el que tiene las conversiones de Google Ads y el Google tag de GA4 `G-4GBJHFHQTM`). No se agregó `AW-816825686` ni `gtag` aparte, para no contar doble. `GTM-MMN2J24H` está vacío y no se usa. `clasica/` conserva además el Facebook Pixel y Universal Analytics (ya sin uso).
+- **Conversión "Whatsapp" de Google Ads:** en `GTM-T3HGC3J` se dispara con el evento `JoinChat` o con enlaces de texto "Citas Por WhatsApp" (sitio anterior). Los botones nuevos tienen otro texto, así que `assets/moderno.js` envía `JoinChat` al `dataLayer` en cada clic a WhatsApp. Más limpio a futuro: en GTM cambiar el disparador a "clic en URL que contiene `api.whatsapp`" y quitar ese bloque del JS.
+- **Meta Pixel** (`875119482922148`): las 21 páginas nuevas lo cargan con `PageView`, y `assets/moderno.js` envía el evento personalizado `JoinChat` en cada clic a WhatsApp (mismo nombre que enviaba el widget del sitio anterior, para conservar el historial). La campaña activa de Meta es de mensajes y no depende del Pixel; el Administrador de eventos marca restricciones de uso compartido de datos por la categoría de salud.
